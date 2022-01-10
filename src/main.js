@@ -1,8 +1,7 @@
 console.log("test");
-var tableData = [
-    //dictionary
-];
+
 var tableObj;
+/*
 for (i = 1; i <= 50; i++) {
     tableData.push({
       id: i,
@@ -17,9 +16,10 @@ for (i = 1; i <= 50; i++) {
       description: "Sample Doc"
     });
   }
+  */
 DataTableObject = new Tabulator(document.getElementById("main-table"), {
-data: tableData,
-height: "1000px",
+data: tableData, // defined in dataArray.js
+height: "auto",
 addRowPos: "bottom",
 columns:[
     {title:"#", field:"slno", width:50, headerSort:false},

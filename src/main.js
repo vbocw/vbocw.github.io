@@ -1,6 +1,6 @@
 console.log("test");
 
-var tableObj;
+//var tableObj;
 /*
 for (i = 1; i <= 50; i++) {
     tableData.push({
@@ -16,25 +16,36 @@ for (i = 1; i <= 50; i++) {
       description: "Sample Doc"
     });
   }
-  */
-DataTableObject = new Tabulator(document.getElementById("main-table"), {
+*/ 
+//var validatedData = []; 
+for(i=0;i<tableData.length; i++){
+  tableData[i].slno = i+1;
+}
+var DataTableObject = new Tabulator(document.getElementById("main-table"), {
 data: tableData, // defined in dataArray.js
-height: "auto",
+height: "100%",
 addRowPos: "bottom",
+sortMode:"remote",
 columns:[
-    {title:"#", field:"slno", width:50, headerSort:false},
-    {title:"Course", field:"subjectName", width:"150", hozAlign:"right", headerSort:true},
-    {title:"Subject", field:"subjectName", width:"150", hozAlign:"right"},
-    {title:"Topic", field:"subjectName", width:"150", hozAlign:"right", headerSort:false},
-    {title:"Description", field:"description",width:"150", hozAlign:"center", headerSort:false},  
-    {title:"Link", field:"docLink", width:"100", hozAlign:"right", headerSort:false},
-    {title:"Contributed by", field:"contributorName",width:"150", hozAlign:"center"},
-    {title:"Department", field:"dept",width:"150", hozAlign:"center"},
-    {title:"Level", field:"courseLevel",width:"100", hozAlign:"center"},
-    {title:"Instructor", field:"InstructorName",width:"100", hozAlign:"center"},
-    {title:"Year & Semester", field:"semYear",width:"100", hozAlign:"center", headerSort:false},
-    {title:"DocID", field:"id", width:"100"},
+    //{title:"uindex", field:"uindex", width:50, headerSort:false},
+    {title:"#", field:"slno", width:50, headerSort:true},
+    {title:"Course", field:"CourseName", width:"100", hozAlign:"right", headerSort:true, formatter:"textarea"},
+    {title:"Subject", field:"subjectName", width:"100", hozAlign:"right", formatter:"textarea"},
+    {title:"Topic", field:"topicName", width:"150", hozAlign:"right", headerSort:false, formatter:"textarea"},
+    {title:"Description", field:"description",width:"150", hozAlign:"center", headerSort:false, formatter:"textarea"},  
+    {title:"Link", field:"docLink", width:"100", hozAlign:"right", headerSort:false, formatter:"html"},
+    {title:"Contributed by", field:"contributorName",width:"125", hozAlign:"center", formatter:"textarea"},
+    {title:"Uploaded On", field:"uploadDate", width:"125", hozAlign:"center", formatter:"textarea"},
+    {title:"Department", field:"dept",width:"100", hozAlign:"center", formatter:"textarea"},
+    {title:"Level", field:"courseLevel",width:"100", hozAlign:"center", formatter:"textarea"},
+    {title:"Instructor", field:"InstructorName",width:"100", hozAlign:"center", formatter:"textarea"},
+    {title:"Year & Semester", field:"semYear",width:"100", hozAlign:"center", headerSort:false, formatter:"textarea"},
+    {title:"DocID", field:"docId", width:"200"},
     
 ],
 });
 
+for(i=0; i<tableData.length; i++){
+  console.log(i);
+  DataTableObject.updateRow(i+1, {slno: "lo"});
+}

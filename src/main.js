@@ -45,7 +45,7 @@ columns:[
 ],
 });
 
-for(i=0; i<tableData.length; i++){
-  console.log(i);
-  DataTableObject.updateRow(i+1, {slno: "lo"});
-}
+//Writing total no of document
+
+var docCount = tableData.length;
+document.getElementById("total-doc-count").innerText = "Total documents: " + String(docCount);

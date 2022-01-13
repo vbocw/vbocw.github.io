@@ -5,39 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VB OpenCourseWire</title>
+    <link rel="icon" href="src/vbocw_800 x 800 logo_icon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="src/style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="lib/bootstrap.min.js"></script>
+</head>
 <body>
-    <div style="display:grid; width: 100%;">
-    <div style="background:#a50432; height: 8rem; width: 100%;">
-        <div style="float: left;margin-left: 3rem" >
-            <img src="src\vbocw_logo_white_800x200.png" height="40%"; width="40%">
+    <div>
+        <div>
+            <div style="background:#a50432; height: auto; width: 100%;">
+                <table>
+                    <tr>
+                        <td>
+                            <div style="padding: 1rem;">
+                                <img src="src\vbocw_logo_white_800x200.png" height="35%" width="35%">
+                            </div>
+                        </td>
+                        <td>
+                            <div style="padding: 3rem; font-size: large; color: azure;">
+                                <b style="margin-right: 2rem;"><a href="#comment"
+                                        style="color: aliceblue;">Comments</a></b>
+                                <b style="margin-right: 2rem;"><a href="https://forms.gle/aNLoVZ9tXmMu55xG8"
+                                    style="color: aliceblue;">Contribute An Upload</a></b>
+                                <b style="margin-right: 2rem;"><a href="src/vbocw_about&contactUs.html"
+                                    style="color: aliceblue;">About & Contact Us</a></b>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <span style="float: right; margin-right: 3rem;margin-top: 3rem; font-size: large; color: azure;">
-            <b style="margin-right: 2rem;"><a href="#comment" style="color: aliceblue; ">Comments</a></b>
-            <b style="margin-right: 2rem;">Contribute An Upload</b>
-            <b style="margin-right: 2rem;">About</b>
-            <b style="margin-right: 2rem;">Contact Us</b>
-        </span>
-    </div>
-    <!-- Tool Bar -->
-    <div style="background:black; height: 5rem;">
-    </div>
-    <!-- Table sheet -->
-    <span style="text-align: center;font-family: 'Times New Roman', Times, serif; color: #ff2361; font-size: medium; padding: 2rem;"><b><i>Information is power. But like all power, there are those who want to keep it for themselves - Aaron Swartz, The internet's own boy </i></b></span>
-    <div  style="width: 95%; height:100rem; margin: auto;">
-        <div id="main-table"></div>
-    </div>
+        <!-- Tool Bar -->
+        <div style="background:black; height: 5rem; padding: 1.5rem;">
+            <div style="color: #f0f0f0;">
+               <p id="total-doc-count">Total documents: </p> 
+            </div>  
+        </div>
+        <div
+            style="text-align: center;font-family: 'Times New Roman', Times, serif; color: #ff2361; font-size: medium; padding: 2rem;">
+            <b><i>Information is power. But like all power, there are those who want to keep it for themselves - Aaron
+                    Swartz, The internet's own boy </i></b>
+        </div>
+        <!-- Table sheet -->
+        <div style="width: 95%; height:100rem; margin: auto; padding: 2rem">
+            <div id="main-table"></div>
+        </div>
     </div>
     <!-- Disqus thread is embaded -->
-    <div id="comment" style="padding: 3rem;">
-        <div style="padding: 2rem;">
-            <b style="font-size: 25pt;">Comments</b>
+    <div id="comment" style="width: 100%;">
+        <div style="background: #f0f0f0; width: 100%;">
+            <div style="padding: 2rem;">
+                <b style="font-size: 25pt;">Comments</b>
+            </div>
         </div>
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread" style="padding: 3rem; height: 50rem;"></div>
         <script>
             /**
             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -60,7 +83,7 @@
     </div>
     <!-- Foot bar -->
     <div style="background: #a50432; height: 10px;width: 100%;"></div>
-    <div style="background:  black; height: 30rem;">
+    <div style="background:  black; height: 30rem; width: 100%;">
     <div>
         <div style="float: left; margin-top: 5rem; margin-left: 5rem;">
             <span style="color: aliceblue; font-weight:bolder; font-size: 20pt">Useful Link</span>
@@ -77,12 +100,10 @@
                   </tr>
                   <tr>
                     <td style="padding-top: 2rem;">
-                        <div style="width:60rem; word-wrap: break-word;">VISVA BHARATI OpenCourseWire is an unofficial platform maintained by a couple of students to provide study materials/notes free of costs. We do not host any documents shared by the community on our platform, we simply share the link. For any content removal request, please contact us with the DocID and we will take action ASAP</div>
+                        <div style="width:60rem; word-wrap: break-word;">VISVA BHARATI OpenCourseWire is an unofficial platform maintained by a group of students to provide study materials/notes free of costs. We do not store any documents, we simply share the link. For any content / link removal request, please contact us with the DocID and we will take action ASAP.</div>
                     </td>
                   </tr>
-            </table>
-            
-            
+            </table>  
         </div>
         <div style="float: right; margin-top: 10rem; margin-right: 10rem;">
             <span style="color: aliceblue;">Total Visitors</span>
